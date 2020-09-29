@@ -1,0 +1,17 @@
+Package: bayesutils
+Title: Utilities for Bayesian Analysis
+Version: 0.1
+Authors@R: 
+    person(given = "Joshua",
+           family = "French",
+           role = c("aut", "cre"),
+           email = "joshua.french@ucdenver.edu",
+           comment = c(ORCID = "0000-0002-9708-3353"))
+Description: This package provides utility functions related to Bayesian data analysis.
+License: GPL (>=2)
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.0
+Suggests: 
+    testthat, invgamma
