@@ -7,13 +7,27 @@
 \alias{qinvgamma}
 \title{The Inverse Gamma Distribution}
 \usage{
-rinvgamma(n, shape, rate = 1, scale = 1/rate)
+rinvgamma(n, shape, scale = 1, rate = 1/scale)
 
-dinvgamma(x, shape, rate = 1, scale = 1/rate, log = FALSE)
+dinvgamma(x, shape, scale = 1, rate = 1/scale, log = FALSE)
 
-pinvgamma(q, shape, rate = 1, scale = 1/rate, lower.tail = TRUE, log.p = FALSE)
+pinvgamma(
+  q,
+  shape,
+  scale = 1,
+  rate = 1/scale,
+  lower.tail = TRUE,
+  log.p = FALSE
+)
 
-qinvgamma(p, shape, rate = 1, scale = 1/rate, lower.tail = TRUE, log.p = FALSE)
+qinvgamma(
+  p,
+  shape,
+  scale = 1,
+  rate = 1/scale,
+  lower.tail = TRUE,
+  log.p = FALSE
+)
 }
 \arguments{
 \item{n}{number of observations. If \code{length(n) > 1}, the length
@@ -22,10 +36,10 @@ qinvgamma(p, shape, rate = 1, scale = 1/rate, lower.tail = TRUE, log.p = FALSE)
 \item{shape}{shape and scale parameters.  Must be positive,
     \code{scale} strictly.}
 
-\item{rate}{an alternative way to specify the scale.}
-
 \item{scale}{shape and scale parameters.  Must be positive,
     \code{scale} strictly.}
+
+\item{rate}{an alternative way to specify the scale.}
 
 \item{x}{vector of quantiles.}
 
@@ -58,7 +72,10 @@ of the result. Only the first elements of the logical arguments are used.
 }
 \description{
 Density, distribution function, quantile function, and random generation for
-the inverse gamma distribution with parameters \code{shape} and \code{scale}.
+the inverse gamma distribution with parameters \code{shape} and \code{scale}. Note that
+the parameterization is consistent with Gelman et al. (2013) (see References) and
+that \code{scale} precedes \code{rate} in the argument list, which is the
+reverse of the \code{\link[stats]{GammaDist}} functions.
 }
 \details{
 If \code{scale} is omitted, it assumes the default value of 1.
@@ -81,4 +98,7 @@ The cumulative hazard \eqn{H(t) = - log(1 - F(t))} is
 p <- (1:9)/10
 pinvgamma(qinvgamma(p, shape = 2), shape = 2)
 1 - 1/exp(qinvgamma(p, shape = 1))
+}
+\references{
+Gelman, A., Carlin, J. B., Stern, H. S., Dunson, D. B., Vehtari, A., & Rubin, D. B. (2013). Bayesian data analysis, 3rd edition. CRC press.
 }
