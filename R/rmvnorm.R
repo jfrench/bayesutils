@@ -31,5 +31,5 @@ rmvnorm = function(n = 1, mu, v, method = "eigen") {
   { stop("method must be 'chol', 'eigen', or 'svd'")}
 
   # return simulated values
-  mu + decomp_cov(v, method) %*% matrix(rnorm(nr * n), nrow = nr, ncol = n)
+  mu + decomp_cov(v, method) %*% matrix(stats::rnorm(nr * n), nrow = nr, ncol = n)
 }

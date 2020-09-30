@@ -15,7 +15,7 @@
 #'
 #' The mean and variance are \eqn{E(X) = m} and \eqn{Var(X) = n/(n-2) s^2} for \eqn{n>2}.
 
-#' @inheritParams InvGammaDist
+#' @inheritParams InvChisquare
 #' @param mean vector of means
 #' @param sigma vector of scaling parameters (see the Details for further information)
 #' @return

@@ -19,6 +19,8 @@ pst(q, df, mean = 0, sigma = 1, lower.tail = TRUE, log.p = FALSE)
 \arguments{
 \item{x}{vector of quantiles.}
 
+\item{df}{degrees of freedom (non-negative, but can be non-integer).}
+
 \item{mean}{vector of means}
 
 \item{sigma}{vector of scaling parameters (see the Details for further information)}
