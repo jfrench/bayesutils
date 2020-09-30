@@ -45,9 +45,9 @@ dst <- function(x, df, mean = 0, sigma = 1, log = FALSE) {
     stop("sigma must be positive")
   }
   if (!log) {
-	  dt((x - mean)/sigma, df = df, log = log)/sigma
+    stats::dt((x - mean)/sigma, df = df, log = log)/sigma
   } else {
-    dt((x - mean)/sigma, df = df, log = log) - log(sigma)
+    stats::dt((x - mean)/sigma, df = df, log = log) - log(sigma)
   }
 }
 
@@ -57,7 +57,7 @@ rst <- function(n, df, mean = 0, sigma = 1) {
   if (any(sigma <= 0)) {
     stop("sigma must be positive")
   }
-	mean + sigma * rnorm(n) * sqrt(df/rchisq(n, df = df))
+	mean + sigma * stats::rnorm(n) * sqrt(df/stats::rchisq(n, df = df))
 }
 
 #' @export
@@ -66,7 +66,7 @@ qst <- function(p, df, mean = 0, sigma = 1, lower.tail = TRUE, log.p = FALSE) {
   if (any(sigma <= 0)) {
     stop("sigma must be positive")
   }
-  mean + sigma * qt(p, df = df, lower.tail = TRUE, log.p = FALSE)
+  mean + sigma * stats::qt(p, df = df, lower.tail = TRUE, log.p = FALSE)
 }
 
 #' @export
@@ -75,5 +75,5 @@ pst <- function(q, df, mean = 0, sigma = 1, lower.tail = TRUE, log.p = FALSE) {
   if (any(sigma <= 0)) {
     stop("sigma must be positive")
   }
-  pt((q - mean)/sigma, df = df, lower.tail = lower.tail, log.p = log.p)
+  stats::pt((q - mean)/sigma, df = df, lower.tail = lower.tail, log.p = log.p)
 }
