@@ -1,69 +1,11 @@
-# #functions for inverse gamma distribution
-#
-# rinvgamma <- function(n, shape, scale = 1, rate = 1/scale)
-# {
-#   if (!missing(rate) && !missing(scale)) {
-#     if (abs(rate * scale - 1) < 1e-15)
-#       warning("specify 'rate' or 'scale' but not both")
-#     else stop("specify 'rate' or 'scale' but not both")
-#   }
-# 	1/rgamma(n, shape = shape, scale = 1/scale)
-# }
-# dinvgamma <- function(x, shape, scale = 1, rate = 1/scale)
-# {
-#   if (!missing(rate) && !missing(scale)) {
-#     if (abs(rate * scale - 1) < 1e-15)
-#       warning("specify 'rate' or 'scale' but not both")
-#     else stop("specify 'rate' or 'scale' but not both")
-#   }
-# 	dgamma(1/x, shape = shape, scale = 1/scale)/x^2
-# }
-# pinvgamma <- function(q, shape, scale = 1, rate = 1/scale, lower.tail = TRUE, log.p = FALSE)
-# {
-#   if (!missing(rate) && !missing(scale)) {
-#     if (abs(rate * scale - 1) < 1e-15)
-#       warning("specify 'rate' or 'scale' but not both")
-#     else stop("specify 'rate' or 'scale' but not both")
-#   }
-# 	1 - pgamma(1/q, shape = shape, scale = 1/scale, lower.tail = lower.tail, log.p = log.p)
-# }
-# qinvgamma <- function(p, shape, scale = 1, rate = 1/scale, lower.tail = TRUE, log.p = FALSE)
-# {
-#   if (!missing(rate) && !missing(scale)) {
-#     if (abs(rate * scale - 1) < 1e-15)
-#       warning("specify 'rate' or 'scale' but not both")
-#     else stop("specify 'rate' or 'scale' but not both")
-#   }
-# 	1/qgamma(1 - p, shape = shape, scale = 1/scale, lower.tail = lower.tail, log.p = log.p)
-# }
-#
-# #functions for inverse chisquare distribution
-#
-# rinvchisq <- function(n, df, scale)
-# {
-# 	rinvgamma(n, shape = df/2, scale = df/2*scale^2)
-# }
-# dinvchisq <- function(x, df, scale)
-# {
-# 	dinvgamma(x, shape = df/2, scale = df/2*scale^2)
-# }
-# pinvchisq <- function(q, df, scale)
-# {
-# 	pinvgamma(q, shape = df/2, scale = df/2*scale^2)
-# }
-# qinvchisq <- function(p, df, scale)
-# {
-# 	qinvgamma(p, shape = df/2, scale = df/2*scale^2)
-# }
-#
 # #functions for scaled and shifted t distribution
 #
-# dst <- function(x, df, mean = 1, sd = 1)
+# dst <- function(x, df, mean = 0, sd = 1)
 # {
 # 	dt((x - mean)/sd, df = df)/sd
 # }
 #
-# rst <- function(n, df, mean = 1, sd = 1)
+# rst <- function(n, df, mean = 0, sd = 1)
 # {
 # 	mean + sd * rnorm(n) * sqrt(df/rchisq(n, df = df))
 # }

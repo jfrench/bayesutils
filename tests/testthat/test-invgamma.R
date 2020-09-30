@@ -1,10 +1,11 @@
-if (requireNamespace("invgamma", quietly = TRUE)) {
-# tests
 set.seed(7)
 x = runif(50, 0, 10)
 shape = runif(50, 0, 10)
 scale = runif(50, 0, 10)
 rate = 1/scale
+p = runif(50)
+
+if (requireNamespace("invgamma", quietly = TRUE)) {
 
 ## test dinvgamma
 # test rate argument works
@@ -31,7 +32,6 @@ test_that("dinvgamma is correct", {
 })
 
 ## test qinvgamma
-p = runif(50)
 rate_qa = invgamma::qinvgamma(p, shape, scale = rate)
 rate_qb = qinvgamma(p, shape, rate = rate)
 
@@ -126,6 +126,7 @@ dinvgamma_bda3 = function(x, shape, scale) {
   scale^shape/gamma(shape) * x^(-(shape + 1)) * exp(-scale/x)
 }
 
+scale_db = dinvgamma(x, shape, scale = scale)
 scale_dc = dinvgamma_bda3(x, shape, scale = scale)
 test_that("dinvgamma is correct (w/ dinvgamma_bda3", {
   expect_true(all.equal(scale_db, scale_dc))

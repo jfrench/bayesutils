@@ -87,10 +87,9 @@ The inverse gamma distribution with parameters \code{shape = a} and \code{scale 
 for \eqn{x \ge 0}, \eqn{a > 0} and \eqn{s > 0}. (Here \eqn{Gamma(a)} is the function implemented by R's
 \code{gamma()} and defined in its help. Note that \eqn{a = 0} corresponds to the trivial distribution with all mass at point 0.)
 
-The mean and variance are \eqn{E(X) = s/(a - 1)} and \eqn{Var(X) = s^2/(a-1)^2/(a-2)} for \eqn{a>2}.
+The mean and variance are \eqn{E(X) = s/(a - 1)} for \eqn{a>1} and \eqn{Var(X) = s^2/(a-1)^2/(a-2)} for \eqn{a>2}.
 
 The cumulative hazard \eqn{H(t) = - log(1 - F(t))} is
-
 \code{-pinvgamma(t, ..., lower = FALSE, log = TRUE)}
 }
 \examples{
