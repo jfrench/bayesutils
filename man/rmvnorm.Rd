@@ -24,6 +24,10 @@ An \eqn{m \times n} where \eqn{n} is the length of \code{mu}.
 Simulate from a Multivariate Normal Distribution
 }
 \examples{
-v = matrix(c(10,3,3,2), 2, 2)Sigma
-rmvnorm(n = 4, 1:2, v))
+v = matrix(c(10,3,3,2), 2, 2)
+y = rmvnorm(n = 4000, 1:2, v)
+# should be close to 1:2
+# rowMeans(y)
+# should be close to v
+# var(t(y))
 }

@@ -92,5 +92,5 @@ all.equal(pinvchisq(x, df = n, scale = s^2), pinvgamma(x, shape = n/2, scale = n
 Gelman, A., Carlin, J. B., Stern, H. S., Dunson, D. B., Vehtari, A., & Rubin, D. B. (2013). Bayesian data analysis, 3rd edition. CRC press.
 }
 \seealso{
-\code{\link[stats]Chisquare}
+\code{\link[stats]{Chisquare}}
 }

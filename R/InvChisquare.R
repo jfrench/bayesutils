@@ -38,7 +38,7 @@
 #' of the result. Only the first elements of the logical arguments are used.
 #' @export
 #' @references Gelman, A., Carlin, J. B., Stern, H. S., Dunson, D. B., Vehtari, A., & Rubin, D. B. (2013). Bayesian data analysis, 3rd edition. CRC press.
-#' @seealso \code{\link[stats]Chisquare}
+#' @seealso \code{\link[stats]{Chisquare}}
 #' @examples
 #' x = 1:10
 #' ## InvChisquare(df = n) is a special case of InvGamma(shape = n/2, scale = 1/2)
