@@ -36,7 +36,9 @@
 #' of the result. Only the first elements of the logical arguments are used.
 #' @export
 #' @references Gelman, A., Carlin, J. B., Stern, H. S., Dunson, D. B., Vehtari, A., & Rubin, D. B. (2013). Bayesian data analysis, 3rd edition. CRC press.
+#' @name InvGammaDist
 #' @rdname InvGammaDist
+#' @seealso \code{\link[stats]{GammaDist}}
 #' @examples
 #' -log(dinvgamma(1:4, shape = 1))
 #' p <- (1:9)/10

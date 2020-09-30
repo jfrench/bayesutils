@@ -20,7 +20,9 @@
 #' The cumulative hazard \eqn{H(t) = - log(1 - F(t))} is
 #' \code{-pinvchisq(t, ..., lower = FALSE, log = TRUE)}
 #'
-#' @inheritParams rinvgamma
+#' @name InvChiSquare
+#' @inheritParams InvGammaDist
+#' @inheritParams stats::Chisquare
 #' @return
 #' \code{dinvchisq} gives the density, \code{pinvchisq} gives the distribution function,
 #' \code{qinvchisq} gives the quantile function, and \code{rinvchisq}
@@ -36,6 +38,7 @@
 #' of the result. Only the first elements of the logical arguments are used.
 #' @export
 #' @references Gelman, A., Carlin, J. B., Stern, H. S., Dunson, D. B., Vehtari, A., & Rubin, D. B. (2013). Bayesian data analysis, 3rd edition. CRC press.
+#' @seealso \code{\link[stats]Chisquare}
 #' @examples
 #' x = 1:10
 #' ## InvChisquare(df = n) is a special case of InvGamma(shape = n/2, scale = 1/2)
