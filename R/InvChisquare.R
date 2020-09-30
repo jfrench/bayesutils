@@ -20,7 +20,7 @@
 #' The cumulative hazard \eqn{H(t) = - log(1 - F(t))} is
 #' \code{-pinvchisq(t, ..., lower = FALSE, log = TRUE)}
 #'
-#' @name InvChiSquare
+#' @name InvChisquare
 #' @inheritParams InvGammaDist
 #' @inheritParams stats::Chisquare
 #' @return

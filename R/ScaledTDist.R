@@ -16,6 +16,8 @@
 #' The mean and variance are \eqn{E(X) = m} and \eqn{Var(X) = n/(n-2) s^2} for \eqn{n>2}.
 
 #' @inheritParams InvGammaDist
+#' @param mean vector of means
+#' @param sigma vector of scaling parameters (see the Details for further information)
 #' @return
 #' \code{dst} gives the density, \code{pst} gives the distribution function,
 #' \code{qst} gives the quantile function, and \code{rst}
@@ -35,6 +37,7 @@
 #' 1 - pst(1:5, df = 1, mean = 1, sigma = 1.2)
 #' qst(.975, df = c(1:5), mean = 1:5, sigma = 1:5)
 #' @export
+#' @seealso \code{\link[stats]{TDist}}
 #' @name ScaledTDist
 #' @rdname ScaledTDist
 dst <- function(x, df, mean = 0, sigma = 1, log = FALSE) {

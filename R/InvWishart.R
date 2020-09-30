@@ -4,6 +4,8 @@
 #' is consistent with Gelman et al. (2013) (see References)
 #'
 #' @name InvWishart
+#' @inheritParams InvChisquare
+#' @inheritParams decomp_cov
 #' @return
 #' The dimensionality of the result is determined by \code{n} for \code{rinvwish}.
 #' The result will be an array of size \code{(nrow(v), nrow(v), n)}.

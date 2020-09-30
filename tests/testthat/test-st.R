@@ -5,7 +5,7 @@ m = rnorm(50)
 s = runif(50, 0, 10)
 p = runif(50)
 
-# if (requireNamespace("brms", quietly = TRUE)) {
+if (requireNamespace("brms", quietly = TRUE)) {
 
 ## test dst
 da = brms::dstudent_t(x, nu, m, s)
@@ -47,13 +47,4 @@ test_that("pst is correct", {
   expect_equal(ut_logp_pa, ut_logp_pb)
 })
 
-# ## test rst
-# set.seed(1)
-# r1 = brms::rstudent_t(50, nu, m, s)
-# set.seed(1)
-# r2 = rst(50, nu, m, s)
-#
-# test_that("rst is correct", {
-#   expect_equal(r1, r2)
-# })
-#
+}

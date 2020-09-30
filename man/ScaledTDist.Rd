@@ -19,6 +19,10 @@ pst(q, df, mean = 0, sigma = 1, lower.tail = TRUE, log.p = FALSE)
 \arguments{
 \item{x}{vector of quantiles.}
 
+\item{mean}{vector of means}
+
+\item{sigma}{vector of scaling parameters (see the Details for further information)}
+
 \item{log}{logical; if \code{TRUE}, probabilities/densities \eqn{p}
     are returned as \eqn{log(p)}.}
 
@@ -72,4 +76,7 @@ qst(.975, df = c(1:5), mean = 1:5, sigma = 1:5)
 }
 \references{
 Gelman, A., Carlin, J. B., Stern, H. S., Dunson, D. B., Vehtari, A., & Rubin, D. B. (2013). Bayesian data analysis, 3rd edition. CRC press.
+}
+\seealso{
+\code{\link[stats]{TDist}}
 }

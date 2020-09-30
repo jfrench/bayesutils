@@ -7,6 +7,14 @@
 \usage{
 rinvwish(n, df, v)
 }
+\arguments{
+\item{n}{number of observations. If \code{length(n) > 1}, the length
+    is taken to be the number required.}
+
+\item{df}{degrees of freedom (non-negative, but can be non-integer).}
+
+\item{v}{An \eqn{N \times N} covariance matrix.}
+}
 \value{
 The dimensionality of the result is determined by \code{n} for \code{rinvwish}.
 The result will be an array of size \code{(nrow(v), nrow(v), n)}.
