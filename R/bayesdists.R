@@ -1,62 +1,3 @@
-# rinvwish <- function(n, df, Sigma)
-# {
-#   x = rWishart(n, df, solve(Sigma))
-#   xl = lapply(seq(dim(x)[3]), function(y) x[ , , y])
-#   g = lapply(xl, solve)
-#   g2 = array(unlist(g), dim = c(dim(g[[1]]), length(g)))
-#   return(g2)
-# }
-#
-# decomp_cov <- function(V, method = "eigen")
-# {
-#   #sanity check
-#   if(!(is.matrix(V)  || inherits(V, "Matrix")))
-#   {
-#     stop("V should be a matrix or Matrix")
-#   }
-#   if(nrow(V)!=ncol(V))
-#   { stop("V must be a square numeric matrix")}
-#   if(!is.element(method, c("chol", "eigen", "svd")))
-#   { stop("method must be 'chol', 'eigen', or 'svd'")}
-#
-#   if(method == "eigen")
-#   {
-#     eigenV <- eigen(V)
-#     return(eigenV$vectors %*% diag(sqrt(pmax(eigenV$values,0))))
-#   }else if(method == "chol")
-#   {
-#     return(t(chol(V)))
-#   }else if(method == "svd")
-#   {
-#     svdV <- svd(V)
-#     return(tcrossprod(svdV$u %*% diag(sqrt(svdV$d)), svdV$v))
-#   }
-# }
-#
-# # mu is the mean of the multivariate normal
-# # should be a vector of length d
-# # V is the covariance matrix of the multivariate normal, of size dxd
-# rmvnorm = function(nsim = 1, mu, V, method = "eigen")
-# {
-#   mu = as.vector(mu)
-#   n = length(mu)
-#
-#   # check argument validity
-#   if(nsim < 0 || !is.finite(nsim))
-#   { stop("nsim should be a non-negative integer")}
-#   if(!is.numeric(mu))
-#   { stop("mu must be a numeric vector")}
-#   if(!is.matrix(V) || nrow(V)!=ncol(V) || !is.numeric(V))
-#   { stop("V must be a square numeric matrix")}
-#   if(n != nrow(V))
-#   { stop("length(mu)!=nrow(V)")}
-#   if(!is.element(method, c("chol", "eigen", "svd")))
-#   { stop("method must be 'chol', 'eigen', or 'svd'")}
-#
-#   # return simulated values
-#   mu + decomp_cov(V, method)%*%matrix(rnorm(n*nsim), nrow = n, ncol = nsim)
-# }
-#
 # #create a function to draw path from two-dimensional gibbs sample
 # #takes x0, a vector of length 2 containing the starting point,
 # #x, an nx2 matrix containing the posterior simulations,
@@ -109,10 +50,4 @@
 #   waic_2 <- -2*lppd + 2*p_waic_2
 #   return (list (waic=waic_2, p_waic=p_waic_2, lppd=lppd, p_waic_1=p_waic_1))
 # }
-#
-#
-#
-#
-#
-#
 #
