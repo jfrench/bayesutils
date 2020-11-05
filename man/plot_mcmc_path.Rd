@@ -21,6 +21,10 @@ plot_mcmc_path(
 
 \item{ncycles}{The number of cycles to plot}
 
+\item{palette}{a valid palette name (one of \code{palette.pals()}).
+    The name is matched to the list of available palettes, ignoring
+    upper vs. lower case, spaces, dashes, etc. in the matching.}
+
 \item{xlim}{x-axis limits}
 
 \item{ylim}{y-axis limits}
@@ -58,5 +62,6 @@ x1 = cbind(rnorm(3), rchisq(3, df = 1))
 x2 = cbind(rnorm(3), rchisq(3, df = 1))
 x = list(x1, x2)
 plot_mcmc_path(x)
-plot_mcmc_path(x, type = "cycle")
+# change point type
+plot_mcmc_path(x, type = "cycle", pch = 20)
 }

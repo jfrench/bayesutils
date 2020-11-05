@@ -15,7 +15,7 @@
 #'
 #' @param x A matrix with 2 columns or a list of 2 column matrices
 #' @param ncycles The number of cycles to plot
-#' @inheritParams grDevices::Palettes
+#' @inheritParams grDevices::palette
 #' @param xlim x-axis limits
 #' @param ylim y-axis limits
 #' @param xlab x-axis label
