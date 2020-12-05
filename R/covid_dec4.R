@@ -1,8 +1,9 @@
 #' @name covid_dec4
 #' @title COVID-19 deaths
-#' @description This data set contains the number of confirmed COVID-19 deaths
+#' @description This data set contains the number of COVID-19 deaths
 #' in U.S. states through December 4th, 2020 along with some very basic
-#' demographic information.
+#' demographic information. While the data are taken from official sources,
+#' they are only intended for demonstration purposes.
 #'
 #' @docType data
 #' @usage data(covid_dec4)

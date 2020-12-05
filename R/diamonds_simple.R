@@ -1,6 +1,6 @@
 #' @name diamonds_simple
 #' @title Simplified diamonds data
-#' @description This data set contains 320 observations from the well known
+#' @description This data set contains 320 observations from the well-known
 #' \code{diamonds} data set in the \code{ggplot2} package. 40 observations
 #' were randomly selected from each of the 8 \code{clarity} levels.
 #' Furthermore, a factor variable, \code{inclusions}, has been added that

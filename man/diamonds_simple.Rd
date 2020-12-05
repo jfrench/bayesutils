@@ -29,7 +29,7 @@ if \code{clarity} is I1, S1, or S2. Otherwise, \code{"minor"}.}
 data(diamonds_simple)
 }
 \description{
-This data set contains 320 observations from the well known
+This data set contains 320 observations from the well-known
 \code{diamonds} data set in the \code{ggplot2} package. 40 observations
 were randomly selected from each of the 8 \code{clarity} levels.
 Furthermore, a factor variable, \code{inclusions}, has been added that
