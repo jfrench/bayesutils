@@ -12,7 +12,7 @@
 #'   \item{state_name}{state name} \item{state_abb}{state name abbreviation}
 #'   \item{deaths}{number of confirmed and probable COVID-19 deaths}
 #'   \item{cases}{number of confirmed and probable COVID-19 cases}
-#'   \item{population}{population 5-year stimate from the 2017 American
+#'   \item{population}{population 5-year estimate from the 2017 American
 #'   Community Survey}
 #'   \item{income}{median income (U.S. dollars) 5-year
 #'   estimate from the 2017 American Community Survey}
@@ -23,7 +23,8 @@
 #'   old with a Bachelor's degree based on the 2010 Census}
 #'   \item{vote_diff_2020}{difference between percentage of voters who voted for
 #'   Joseph Biden versus Donald Trump in the 2020 election. This is (total Biden
-#'   votes - total Trump votes) * 100 / (total Biden votes + total Trump votes)}} }
+#'   votes - total Trump votes) * 100 / (total Biden votes + total Trump votes)}
+#'   }
 #' @source
 #' <https://covidtracking.com/data/download> (Accessed 2020-03-08) and <https://www.census.gov>
 #' MIT Election Data and Science Lab, 2017, "U.S. President 1976–2020", <https://doi.org/10.7910/DVN/42MVDX>, Harvard Dataverse, V6
