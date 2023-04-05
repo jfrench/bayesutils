@@ -17,7 +17,7 @@ qst(p, df, mean = 0, sigma = 1, lower.tail = TRUE, log.p = FALSE)
 pst(q, df, mean = 0, sigma = 1, lower.tail = TRUE, log.p = FALSE)
 }
 \arguments{
-\item{x}{vector of quantiles.}
+\item{x, q}{vector of quantiles.}
 
 \item{df}{degrees of freedom (non-negative, but can be non-integer).}
 
@@ -25,7 +25,7 @@ pst(q, df, mean = 0, sigma = 1, lower.tail = TRUE, log.p = FALSE)
 
 \item{sigma}{vector of scaling parameters (see the Details for further information)}
 
-\item{log}{logical; if \code{TRUE}, probabilities/densities \eqn{p}
+\item{log, log.p}{logical; if \code{TRUE}, probabilities/densities \eqn{p}
     are returned as \eqn{log(p)}.}
 
 \item{n}{number of observations. If \code{length(n) > 1}, the length
@@ -35,11 +35,6 @@ pst(q, df, mean = 0, sigma = 1, lower.tail = TRUE, log.p = FALSE)
 
 \item{lower.tail}{logical; if TRUE (default), probabilities are
     \eqn{P[X \le x]}, otherwise, \eqn{P[X > x]}.}
-
-\item{log.p}{logical; if \code{TRUE}, probabilities/densities \eqn{p}
-    are returned as \eqn{log(p)}.}
-
-\item{q}{vector of quantiles.}
 }
 \value{
 \code{dst} gives the density, \code{pst} gives the distribution function,
